@@ -7,13 +7,26 @@
   
   <title>从入门到放弃</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="前言想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。 环境搭建准备MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQ">
+<meta property="og:type" content="article">
 <meta property="og:title" content="从入门到放弃">
-<meta property="og:url" content="http://aloofjr.github.io/index.html">
+<meta property="og:url" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/index.html">
 <meta property="og:site_name" content="从入门到放弃">
+<meta property="og:description" content="前言想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。 环境搭建准备MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQ">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/2542D071-0282-41AA-A650-FD589B48679B.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/7BEE9FE7-E81D-4633-A2F9-74B0EAB157DA.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/B2F7FBFE-1BBC-4FED-B299-0FE6FF74025C.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/6EA325BC-F463-4838-BDE6-757A0D190F18.png">
+<meta property="og:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/61AA36CD-1E9F-45E8-B281-88C87CB8F882.png">
+<meta property="og:updated_time" content="2019-05-24T18:49:44.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从入门到放弃">
+<meta name="twitter:description" content="前言想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。 环境搭建准备MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQ">
+<meta name="twitter:image" content="http://aloofjr.github.io/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
   
     <link rel="alternate" href="/atom.xml" title="从入门到放弃" type="application/atom+xml">
   
@@ -64,9 +77,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-【从入门到放弃-MySQL】CLion调试MySQL8.0源码" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【从入门到放弃-MySQL】CLion调试MySQL8.0源码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/25/【从入门到放弃-MySQL】CLion调试MySQL8.0源码/" class="article-date">
   <time datetime="2019-05-24T18:29:32.755Z" itemprop="datePublished">2019-05-25</time>
@@ -100,11 +111,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
-
+</article>
 
 </section>
         
