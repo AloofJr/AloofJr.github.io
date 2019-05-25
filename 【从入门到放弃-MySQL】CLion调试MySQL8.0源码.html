@@ -155,7 +155,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?381d45f0d68023788bb8e002528b75bd";
+      hm.src = "https://hm.baidu.com/hm.js?7f0f37da8af427b455867492ca709c92";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -449,10 +449,10 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQL成功编译运行成功，但是遇到了诡异的调试无法的问题，排查无果最后转用CLion<br>CLion：2019.1.3<br>mysql源码：<a href="https://github.com/mysql/mysql-server" target="_blank" rel="noopener">https://github.com/mysql/mysql-server</a><br>cmake和boost：brew install cmake boost</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQL成功编译运行成功，但是遇到了诡异的调试无法的问题，排查无果最后转用CLion<br>CLion：2019.1.3<br>mysql源码：<a href="https://github.com/mysql/mysql-server" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/mysql/mysql-server</a><br>cmake和boost：brew install cmake boost</p>
 <h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>MySQL源码目录：/var/workspace/mysql/mysql-8.0.16/<br>boost目录：/usr/local/Cellar/boost/1.68.0_1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd /var/workspace/mysql/mysql-8.0.16/</span><br><span class="line">mkdir work</span><br><span class="line">cd work</span><br><span class="line"></span><br><span class="line">cmake . -DWITH_DEBUG=1 -DCMAKE_INSTALL_PREFIX=/var/workspace/mysql/mysql-8.0.16/work -DMYSQL_DATADIR=/var/workspace/mysql/mysql-8.0.16/work/data -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DWITH_LIBWRAP=0 -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DENABLED_LOCAL_INFILE=1 -DENABLED_LOCAL_INFILE=1 -DENABLE_DOWNLOADS=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/usr/local/Cellar/boost/1.68.0_1 -DFORCE_INSOURCE_BUILD=1</span><br><span class="line"></span><br><span class="line">make -j 4</span><br><span class="line"></span><br><span class="line">make install -j 4</span><br><span class="line"></span><br><span class="line">cd /var/workspace/mysql/mysql-8.0.16/work</span><br><span class="line"></span><br><span class="line">sudo bin/mysqld --basedir=/var/workspace/mysql/mysql-8.0.16/work --datadir=/var/workspace/mysql/mysql-8.0.16/work/data --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure>
-<p>如果最后一步执行出错可以参考<a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" target="_blank" rel="noopener">https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html</a><br>新建mysql-files并修改权限<br><img src="/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png" alt="48c2963f2153ea9356e05757e63bcd03"></p>
+<p>如果最后一步执行出错可以参考<a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" target="_blank" rel="external nofollow noopener noreferrer">https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html</a><br>新建mysql-files并修改权限<br><img src="/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png" alt="48c2963f2153ea9356e05757e63bcd03"></p>
 <p>可能会有各种神奇的报错，主要是权限问题！<br>搞不定的话参考下面有最终的目录权限截图</p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>导入mysql-8.0.16项目，配置cmake参数<br><img src="/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png" alt="46507b1e6cdb05c4a95b41e5a268ec16"><br>options参考编译过程中的cmake参数</p>
 <p><img src="/2542D071-0282-41AA-A650-FD589B48679B.png" alt="f7a6ccc8404b662a9fe35260a1c3f86a"><br>选择mysqld 并编辑启动参数<br><img src="/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png" alt="0916ea432bb404ceefc6dd8a7eee4bff"><br>arguments如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--basedir=/var/workspace/mysql/mysql-8.0.16/work --datadir=/var/workspace/mysql/mysql-8.0.16/work/data --user=mysql</span><br></pre></td></tr></table></figure></p>
@@ -623,7 +623,7 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/AloofJr" target="_blank" title="GitHub">
+                    <a href="https://github.com/AloofJr" target="_blank" title="GitHub" rel="external nofollow noopener noreferrer">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
