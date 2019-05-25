@@ -10,4 +10,6 @@ Disallow: /fonts/
 Disallow: /vendors/
 
 Sitemap: http://aloofjr.github.io/sitemap.xml
+Sitemap: https://aloofjr.github.io/sitemap.xml
 Sitemap: http://aloofjr.github.io/baidusitemap.xml
+Sitemap: https://aloofjr.github.io/baidusitemap.xml
