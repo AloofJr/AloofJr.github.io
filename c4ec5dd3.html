@@ -96,19 +96,19 @@
 <meta property="og:site_name" content="从入门到放弃">
 <meta property="og:description" content="前言想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。 环境搭建准备MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQ">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.nc2era.com/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
-<meta property="og:image" content="https://www.nc2era.com/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png">
-<meta property="og:image" content="https://www.nc2era.com/2542D071-0282-41AA-A650-FD589B48679B.png">
-<meta property="og:image" content="https://www.nc2era.com/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png">
-<meta property="og:image" content="https://www.nc2era.com/7BEE9FE7-E81D-4633-A2F9-74B0EAB157DA.png">
-<meta property="og:image" content="https://www.nc2era.com/B2F7FBFE-1BBC-4FED-B299-0FE6FF74025C.png">
-<meta property="og:image" content="https://www.nc2era.com/6EA325BC-F463-4838-BDE6-757A0D190F18.png">
-<meta property="og:image" content="https://www.nc2era.com/61AA36CD-1E9F-45E8-B281-88C87CB8F882.png">
-<meta property="og:updated_time" content="2019-05-25T08:16:58.229Z">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/2542D071-0282-41AA-A650-FD589B48679B.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/7BEE9FE7-E81D-4633-A2F9-74B0EAB157DA.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/B2F7FBFE-1BBC-4FED-B299-0FE6FF74025C.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/6EA325BC-F463-4838-BDE6-757A0D190F18.png">
+<meta property="og:image" content="https://www.nc2era.com/c4ec5dd3/61AA36CD-1E9F-45E8-B281-88C87CB8F882.png">
+<meta property="og:updated_time" content="2019-05-25T12:57:01.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【从入门到放弃-MySQL】CLion调试MySQL8.0源码">
 <meta name="twitter:description" content="前言想对的MySQL底层实现做一些了解，奈何没有用过C++不知道怎么调试一个大型项目，一日和大神交流时大神扔给我了一份《XCode调试MySQL8秘籍》。于是在几经波折（主要是因为菜）之后终于打开了MySQL的调试大门。 环境搭建准备MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQ">
-<meta name="twitter:image" content="https://www.nc2era.com/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
+<meta name="twitter:image" content="https://www.nc2era.com/c4ec5dd3/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png">
 
 
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  771
+                  772
                 </span>
               
 
@@ -452,12 +452,23 @@
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>MacOS： 10.14.5：因为根据大神秘籍，要使用Xcode，但Xcode下载目前只支持10.14.3，因此在10.13.6下强升的系统版本，Xcode下MySQL成功编译运行成功，但是遇到了诡异的调试无法的问题，排查无果最后转用CLion<br>CLion：2019.1.3<br>mysql源码：<a href="https://github.com/mysql/mysql-server" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/mysql/mysql-server</a><br>cmake和boost：brew install cmake boost</p>
 <h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>MySQL源码目录：/var/workspace/mysql/mysql-8.0.16/<br>boost目录：/usr/local/Cellar/boost/1.68.0_1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd /var/workspace/mysql/mysql-8.0.16/</span><br><span class="line">mkdir work</span><br><span class="line">cd work</span><br><span class="line"></span><br><span class="line">cmake . -DWITH_DEBUG=1 -DCMAKE_INSTALL_PREFIX=/var/workspace/mysql/mysql-8.0.16/work -DMYSQL_DATADIR=/var/workspace/mysql/mysql-8.0.16/work/data -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DWITH_LIBWRAP=0 -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DENABLED_LOCAL_INFILE=1 -DENABLED_LOCAL_INFILE=1 -DENABLE_DOWNLOADS=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/usr/local/Cellar/boost/1.68.0_1 -DFORCE_INSOURCE_BUILD=1</span><br><span class="line"></span><br><span class="line">make -j 4</span><br><span class="line"></span><br><span class="line">make install -j 4</span><br><span class="line"></span><br><span class="line">cd /var/workspace/mysql/mysql-8.0.16/work</span><br><span class="line"></span><br><span class="line">sudo bin/mysqld --basedir=/var/workspace/mysql/mysql-8.0.16/work --datadir=/var/workspace/mysql/mysql-8.0.16/work/data --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure>
-<p>如果最后一步执行出错可以参考<a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" rel="external nofollow noopener noreferrer" target="_blank">https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html</a><br>新建mysql-files并修改权限<br><img src="/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png" alt="48c2963f2153ea9356e05757e63bcd03"></p>
+<p>如果最后一步执行出错可以参考<a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" rel="external nofollow noopener noreferrer" target="_blank">https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html</a><br>新建mysql-files并修改权限<br><img src="/c4ec5dd3/3CC9AF80-0AA5-4684-95D2-732601FD0BC0.png"></p>
 <p>可能会有各种神奇的报错，主要是权限问题！<br>搞不定的话参考下面有最终的目录权限截图</p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>导入mysql-8.0.16项目，配置cmake参数<br><img src="/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png" alt="46507b1e6cdb05c4a95b41e5a268ec16"><br>options参考编译过程中的cmake参数</p>
-<p><img src="/2542D071-0282-41AA-A650-FD589B48679B.png" alt="f7a6ccc8404b662a9fe35260a1c3f86a"><br>选择mysqld 并编辑启动参数<br><img src="/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png" alt="0916ea432bb404ceefc6dd8a7eee4bff"><br>arguments如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--basedir=/var/workspace/mysql/mysql-8.0.16/work --datadir=/var/workspace/mysql/mysql-8.0.16/work/data --user=mysql</span><br></pre></td></tr></table></figure></p>
-<p>启动调试，此时可能还会报错<br><img src="/7BEE9FE7-E81D-4633-A2F9-74B0EAB157DA.png" alt="01e84176e88797ac90283bb3b9d9563c"><br>还是权限问题。。。clion无法以root权限启动debug，尝试各种方法无效。因此把mysql的data目录改为777<br>最终目录权限如下图：<br><img src="/B2F7FBFE-1BBC-4FED-B299-0FE6FF74025C.png" alt="ed3211ce6b71f605831d97cafcd98a47"><br>再此点击debug按钮，启动成功（注意没error了，可以用客户端测试启动成功了）。</p>
-<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p><img src="/6EA325BC-F463-4838-BDE6-757A0D190F18.png" alt="daa21a63ad6e271ee3a252fffeb06be9"><br>我们在代码中打上断点，客户端执行SQL语句时就能在断点处看到各变量信息了，比如图中的SQL解析。<br><img src="/61AA36CD-1E9F-45E8-B281-88C87CB8F882.png" alt="2075b2a0c844d74c80a3bc77edc9548b"><br>可以看到执行阻塞了</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>导入mysql-8.0.16项目，配置cmake参数<br><img src="/c4ec5dd3/0CD9E808-93A6-40DF-A976-B8A0B6C91C40.png"></p>
+<p>options参考编译过程中的cmake参数</p>
+<img src="/c4ec5dd3/2542D071-0282-41AA-A650-FD589B48679B.png">
+<p>选择mysqld 并编辑启动参数</p>
+<img src="/c4ec5dd3/BD0337F5-7BCE-40A6-8EAB-824208ED0211.png">
+<p>arguments如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--basedir=/var/workspace/mysql/mysql-8.0.16/work --datadir=/var/workspace/mysql/mysql-8.0.16/work/data --user=mysql</span><br></pre></td></tr></table></figure></p>
+<p>启动调试，此时可能还会报错</p>
+<img src="/c4ec5dd3/7BEE9FE7-E81D-4633-A2F9-74B0EAB157DA.png">
+<p>还是权限问题。。。clion无法以root权限启动debug，尝试各种方法无效。因此把mysql的data目录改为777<br>最终目录权限如下图：</p>
+<img src="/c4ec5dd3/B2F7FBFE-1BBC-4FED-B299-0FE6FF74025C.png">
+<p>再此点击debug按钮，启动成功（注意没error了，可以用客户端测试启动成功了）。</p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><img src="/c4ec5dd3/6EA325BC-F463-4838-BDE6-757A0D190F18.png">
+<p>我们在代码中打上断点，客户端执行SQL语句时就能在断点处看到各变量信息了，比如图中的SQL解析。</p>
+<img src="/c4ec5dd3/61AA36CD-1E9F-45E8-B281-88C87CB8F882.png">
+<p>可以看到执行阻塞了</p>
 <p>Clion代码调试的具体方法不做赘述了，网上一堆。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>之前一直想调试MySQL，但是总是没有迈出第一步，代码下载下来就完事儿了。这次一鼓作气走了下来，希望能开个好头，养成各种代码调试的好习惯。看代码中细节比任何文档中都来的扎实（当然，时间充裕前提下）。<br>搭建环境的过程中遇到了很多问题，Google、百度无数遍都没有能解决问题，最终还是通过MySQL的官方手册找到的答案。MySQL的官方手册简直神器，大家可以好好利用起来。<br>C++的知识仅停留在大学课本阶段，阅读源码简直困难，要能坚持下去，加油！</p>
 
