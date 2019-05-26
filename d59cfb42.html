@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="从入门到放弃,AloofJr">
+  <meta name="keywords" content="PHP,WebSocket,Swoole,">
 
 
 
@@ -89,17 +89,36 @@
 
 
 
-<meta name="description" content="从入门到放弃">
-<meta name="keywords" content="从入门到放弃,MySQL,Java,PHP,Linux,编程,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="从入门到放弃">
-<meta property="og:url" content="https://nc2era.com/archives/2019/05/index.html">
+<meta name="description" content="前言2018年伊始，各种答题赚钱热流席卷了朋友圈，先有百万英雄、冲顶大会成为风口浪尖，又有全民答题推波助澜。 公司适时推出了 《答题助手》采用“真人工 · 智能“的方式在直播答题的同时为大家提供参考答案，帮助大家稳、准、快的答对12道题目，分得真金白银。接下来我们以答题助手为例聊一聊websocket的应用 背景介绍 答题助手目前的planA如上 客户端采用轮询的方式每秒向服务器发送2次http请">
+<meta name="keywords" content="PHP,WebSocket,Swoole">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【从入门到放弃-PHP】答题助手 PHP SWOOLE WebSocket 实战">
+<meta property="og:url" content="https://nc2era.com/d59cfb42.html">
 <meta property="og:site_name" content="从入门到放弃">
-<meta property="og:description" content="从入门到放弃">
+<meta property="og:description" content="前言2018年伊始，各种答题赚钱热流席卷了朋友圈，先有百万英雄、冲顶大会成为风口浪尖，又有全民答题推波助澜。 公司适时推出了 《答题助手》采用“真人工 · 智能“的方式在直播答题的同时为大家提供参考答案，帮助大家稳、准、快的答对12道题目，分得真金白银。接下来我们以答题助手为例聊一聊websocket的应用 背景介绍 答题助手目前的planA如上 客户端采用轮询的方式每秒向服务器发送2次http请">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/1.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/2.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/3.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/4.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/5.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/6.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/7.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/8.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/9.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/10.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/11.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/12.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/13.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/14.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/15.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/16.png">
+<meta property="og:image" content="https://nc2era.com/d59cfb42/17.png">
+<meta property="og:updated_time" content="2019-05-26T07:50:02.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从入门到放弃">
-<meta name="twitter:description" content="从入门到放弃">
+<meta name="twitter:title" content="【从入门到放弃-PHP】答题助手 PHP SWOOLE WebSocket 实战">
+<meta name="twitter:description" content="前言2018年伊始，各种答题赚钱热流席卷了朋友圈，先有百万英雄、冲顶大会成为风口浪尖，又有全民答题推波助澜。 公司适时推出了 《答题助手》采用“真人工 · 智能“的方式在直播答题的同时为大家提供参考答案，帮助大家稳、准、快的答对12道题目，分得真金白银。接下来我们以答题助手为例聊一聊websocket的应用 背景介绍 答题助手目前的planA如上 客户端采用轮询的方式每秒向服务器发送2次http请">
+<meta name="twitter:image" content="https://nc2era.com/d59cfb42/1.png">
 
 
 
@@ -129,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://nc2era.com/archives/2019/05/">
+  <link rel="canonical" href="https://nc2era.com/d59cfb42.html">
 
 
 
 
 
-  <title>归档 | 从入门到放弃</title>
+  <title>【从入门到放弃-PHP】答题助手 PHP SWOOLE WebSocket 实战 | 从入门到放弃</title>
   
 
 
@@ -164,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,247 +309,273 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nc2era.com/d59cfb42.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AloofJr">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="从入门到放弃">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">【从入门到放弃-PHP】答题助手 PHP SWOOLE WebSocket 实战</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T15:29:36+08:00">
+                2019-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/个人学习/" itemprop="url" rel="index">
+                    <span itemprop="name">个人学习</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/d59cfb42.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/d59cfb42.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/d59cfb42.html" itemprop="url">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">【从入门到放弃-PHP】答题助手 PHP SWOOLE WebSocket 实战</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.4k
+                </span>
               
-            </a>
-        
-      </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T15:29:36+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/76483f54.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-Hadoop】Hadoop基础学习</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T14:11:26+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/76b41bca.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-PHP】foreach 引用的坑</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T13:18:44+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2018年伊始，各种答题赚钱热流席卷了朋友圈，先有百万英雄、冲顶大会成为风口浪尖，又有全民答题推波助澜。 公司适时推出了 《答题助手》采用“真人工 · 智能“的方式在直播答题的同时为大家提供参考答案，帮助大家稳、准、快的答对12道题目，分得真金白银。接下来我们以答题助手为例聊一聊websocket的应用</p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><img src="/d59cfb42/1.png">
+<p>答题助手目前的planA如上 客户端采用轮询的方式每秒向服务器发送2次http请求，若有正确答案返回则展示在页面上。这种方式给服务器带来了很大的压力  答题直播时，每一个使用答题助手的用户会给服务器带来2qps的压力。经过优化目前每台服务器能抗约1w/qps的并发，当用户数上来后只能加机器。</p>
+<p>分析业务场景，其实大多数的请求是无效的，客户端只需要在答题结果出来后，接收答案并展示即可。因此完全可以采用websocket的方法，在服务端获取到答案时，主动push消息到客户端即可。</p>
+<h2 id="Websocket协议"><a href="#Websocket协议" class="headerlink" title="Websocket协议"></a>Websocket协议</h2><pre><code>Websocket协议是基于tcp协议的应用层协议 主要是为了实现客户端与服务端的全双工通信。
+</code></pre><h3 id="Websocket与HTTP"><a href="#Websocket与HTTP" class="headerlink" title="Websocket与HTTP"></a>Websocket与HTTP</h3><pre><code>Websocket与HTTP都是基于TCP协议的应用层协议，Websocket在建立连接时需要先发送HTTP请求与服务器握手，待服务器返回101进行协议转换，从HTTP切成Websocket协议进行通信
+</code></pre><img src="/d59cfb42/2.png">
+<p>握手过程如上：<br><img src="/d59cfb42/3.png"><br><img src="/d59cfb42/4.png"><br>一、客户端：申请协议升级</p>
+<p>客户端发起协议升级请求。采用HTTP报文，且仅支持GET方式</p>
+<pre><code>含义：
+Request Method: GET    使用get的方式
+Connection:    Upgrade    表示要升级协议
+Upgrade: websocket    表示要升级的协议是websocket
+Sec-WebScoket-Version: 13 websocket协议支持的版本号。如果服务端不支持该版本，服务端需要返回一个Sec-WebScoket-Version Header，里面包含支持的版本号
+Sec-WebSocket-Key:  7PMYxFH/jxrVsZvKeSTW1Q== 采用base64编码的随机16字节长的字符序列
+Sec-WebScocket-Extensions: permessage-deflate; client_max_window_bits 希望采用的扩展协议
+</code></pre><p>二、服务端：响应协议升级</p>
+<img src="/d59cfb42/5.png">
+<pre><code>Connection: upgrade 同意升级
+Sec-WebSocket-Accept: E1rL2SuyYrDeuDYc5kUQApGBsyg= 服务端根据请求首部的Sec-WebSocket-Key计算出来的 计算方式如下：
+1、将Sec-WebSocket-Key和 258EAFA5-E914-47DA-95CA-C5AB0DC85B11 进行拼接
+2、经过SHA1计算并转成base64
+Sec-WebSocket-Version: 13 升级版本为13
+Upgrade: websocket 升级的协议是websocket
+</code></pre><p>三、客户端验证<br>客户端同样通过将Sec-WebSocket-Key和258EAFA5-E914-47DA-95CA-C5AB0DC85B11 拼接经过SHA1计算，转为base64后与Sec-WebSocket-Accept对比，相等则验证成功</p>
+<p>至此连接建立，由HTTP协议切换为WebSocket协议</p>
+<h2 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h2><p>在了解WebSocket协议原理后 可基于TCP socket通过处理协议及数据帧搭建WebSocket服务。因swoole扩展已经对WebSocket进行了很好的封装以及进程的管理，同时是以C来实现的WebSocket，性能及稳定性都经过了很多大公司的检验，最终选用Swoole进行开发</p>
+<p>Swoole扩展安装：下载swoole-2.0.12 table版 解压 进入解压目录 按以下步骤安装</p>
+<img src="/d59cfb42/6.png">
+<p>(swoole2.0.12版本起不再支持php5，扩展编译需gcc-4.4+版本)</p>
+<p>安装完毕在php.ini配置文件中加上extension=swoole.so即可启用swoole扩展</p>
+<p>可使用下面几行代码实现一个最简单的WebSocket Server:</p>
+<img src="/d59cfb42/7.png">
+<p>在on方法中注册事件以及其对应的回调函数进行处理。其中onMessage回调函数为必选，否则服务不会启动。用户可以onHandShake回调自定义握手协议，否则将使用Swoole默认的协议握手</p>
+<p>广播：直接发http请求能触发onRequest回调，可在回调中遍历connections属性广播请求</p>
+<img src="/d59cfb42/8.png">
+<p>注意：connections是一个迭代器对象 并且依赖pcre库，若编译时为安装prce库，此属性无法使用。需yum install pcre-devel 后重新编译swoole扩展使用</p>
+<p>动态路由：搭建通用服务，使用一个websocket server提供多种类型的服务，需要根据路由动态选择服务类型和处理逻辑 可在onOpen时获取request对象的request_uri属性来根据url选择不同的路由做处理</p>
+<img src="/d59cfb42/9.png">
+<p>onMessage时，无法获取request 需要在消息体内指定request_uri选择路由</p>
+<img src="/d59cfb42/10.png">
+<h2 id="性能压测"><a href="#性能压测" class="headerlink" title="性能压测"></a>性能压测</h2><p>主要测试WebSocket Server能抗住多少长连接和并发，以及push消息时的速度和消息到达率</p>
+<p>fork N个进程使用异步非阻塞客户端进行压测</p>
+<img src="/d59cfb42/11.png">
+<p>在32核 128G机器上测得部分数据如下：<br><img src="/d59cfb42/12.png"><br><img src="/d59cfb42/13.png"><br><img src="/d59cfb42/14.png"></p>
+<p>并发数为55000时，cpu的idle峰值约为87%，链接建立后保持连接时约为99% push消息时97%</p>
+<p>push55000条消息平均需要200ms，消息送达率为100%</p>
+<p>可见WebSocket长连接对机器资源的消耗非常小。</p>
+<h2 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h2><p>为了能在系统负载过大、无法申请到内存、程序被误杀等情况下  能重新拉起server需要有脚本监测 自动启动主进程，脚本如下</p>
+<img src="/d59cfb42/15.png">
+<p>停止脚本</p>
+<img src="/d59cfb42/16.png">
+<p>需要在Server启动后设置进程名称</p>
+<img src="/d59cfb42/17.png">
+<p>至此WebSocket服务的搭建及压测监控都已完成。接下来在完成服务的稳定性、上下线等运维相关的工作后会计划灰度上线 后期结论会继续同步</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/6e2383f1.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】mysql 数据恢复实战&踩坑记录</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T22:30:43+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/b382ba8d.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】mysql中要避免使用大事务</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T17:23:40+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/c4ec5dd3.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】CLion调试MySQL8.0源码</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T02:34:42+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/WebSocket/" rel="tag"># WebSocket</a>
+          
+            <a href="/tags/Swoole/" rel="tag"># Swoole</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/76483f54.html" rel="next" title="【从入门到放弃-Hadoop】Hadoop基础学习">
+                <i class="fa fa-chevron-left"></i> 【从入门到放弃-Hadoop】Hadoop基础学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -538,6 +583,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -558,8 +610,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -636,6 +697,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景介绍"><span class="nav-number">2.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Websocket协议"><span class="nav-number">3.</span> <span class="nav-text">Websocket协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Websocket与HTTP"><span class="nav-number">3.1.</span> <span class="nav-text">Websocket与HTTP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术方案"><span class="nav-number">4.</span> <span class="nav-text">技术方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性能压测"><span class="nav-number">5.</span> <span class="nav-text">性能压测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监控"><span class="nav-number">6.</span> <span class="nav-text">监控</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -799,6 +876,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
