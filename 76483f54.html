@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="从入门到放弃,AloofJr">
+  <meta name="keywords" content="Hadoop,">
 
 
 
@@ -89,17 +89,32 @@
 
 
 
-<meta name="description" content="从入门到放弃">
-<meta name="keywords" content="从入门到放弃,MySQL,Java,PHP,Linux,编程,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="从入门到放弃">
-<meta property="og:url" content="https://nc2era.com/archives/2019/05/index.html">
+<meta name="description" content="前言目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解 基础概念大数据的本质一、数据的存储：分布式文件系统（分布式存储） 二、数据的计算：分部署计算 基础知识学习大数据需要具备Java知识基础及Linux知识基础 学习路线Java基础和Linux基础Hadoop的学习：体系结构、原理、编程第一阶段： HDFS、">
+<meta name="keywords" content="Hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【从入门到放弃-Hadoop】Hadoop基础学习">
+<meta property="og:url" content="https://nc2era.com/76483f54.html">
 <meta property="og:site_name" content="从入门到放弃">
-<meta property="og:description" content="从入门到放弃">
+<meta property="og:description" content="前言目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解 基础概念大数据的本质一、数据的存储：分布式文件系统（分布式存储） 二、数据的计算：分部署计算 基础知识学习大数据需要具备Java知识基础及Linux知识基础 学习路线Java基础和Linux基础Hadoop的学习：体系结构、原理、编程第一阶段： HDFS、">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://nc2era.com/undefined/1.png">
+<meta property="og:image" content="https://nc2era.com/undefined/2.png">
+<meta property="og:image" content="https://nc2era.com/undefined/3.png">
+<meta property="og:image" content="https://nc2era.com/undefined/4.png">
+<meta property="og:image" content="https://nc2era.com/undefined/5.png">
+<meta property="og:image" content="https://nc2era.com/undefined/6.png">
+<meta property="og:image" content="https://nc2era.com/undefined/7.png">
+<meta property="og:image" content="https://nc2era.com/undefined/8.png">
+<meta property="og:image" content="https://nc2era.com/undefined/9.png">
+<meta property="og:image" content="https://nc2era.com/undefined/10.png">
+<meta property="og:image" content="https://nc2era.com/undefined/11.png">
+<meta property="og:image" content="https://nc2era.com/undefined/12.png">
+<meta property="og:image" content="https://nc2era.com/undefined/13.png">
+<meta property="og:updated_time" content="2019-05-26T06:30:17.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从入门到放弃">
-<meta name="twitter:description" content="从入门到放弃">
+<meta name="twitter:title" content="【从入门到放弃-Hadoop】Hadoop基础学习">
+<meta name="twitter:description" content="前言目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解 基础概念大数据的本质一、数据的存储：分布式文件系统（分布式存储） 二、数据的计算：分部署计算 基础知识学习大数据需要具备Java知识基础及Linux知识基础 学习路线Java基础和Linux基础Hadoop的学习：体系结构、原理、编程第一阶段： HDFS、">
+<meta name="twitter:image" content="https://nc2era.com/undefined/1.png">
 
 
 
@@ -129,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://nc2era.com/archives/2019/05/">
+  <link rel="canonical" href="https://nc2era.com/76483f54.html">
 
 
 
 
 
-  <title>归档 | 从入门到放弃</title>
+  <title>【从入门到放弃-Hadoop】Hadoop基础学习 | 从入门到放弃</title>
   
 
 
@@ -164,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,212 +305,377 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nc2era.com/76483f54.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AloofJr">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="从入门到放弃">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">【从入门到放弃-Hadoop】Hadoop基础学习</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T14:11:26+08:00">
+                2019-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/个人学习/" itemprop="url" rel="index">
+                    <span itemprop="name">个人学习</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/76483f54.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/76483f54.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/76483f54.html" itemprop="url">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">【从入门到放弃-Hadoop】Hadoop基础学习</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k
+                </span>
               
-            </a>
-        
-      </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T14:11:26+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/76b41bca.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-PHP】foreach 引用的坑</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T13:18:44+08:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解</p>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><h3 id="大数据的本质"><a href="#大数据的本质" class="headerlink" title="大数据的本质"></a>大数据的本质</h3><p>一、数据的存储：分布式文件系统（分布式存储）</p>
+<p>二、数据的计算：分部署计算</p>
+<h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>学习大数据需要具备Java知识基础及Linux知识基础</p>
+<h3 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h3><h4 id="Java基础和Linux基础"><a href="#Java基础和Linux基础" class="headerlink" title="Java基础和Linux基础"></a>Java基础和Linux基础</h4><h4 id="Hadoop的学习：体系结构、原理、编程"><a href="#Hadoop的学习：体系结构、原理、编程" class="headerlink" title="Hadoop的学习：体系结构、原理、编程"></a>Hadoop的学习：体系结构、原理、编程</h4><p>第一阶段：</p>
+<pre><code>HDFS、MapReduce、HBase（NoSQL数据库）
+</code></pre><p>第二阶段：</p>
+<pre><code>数据分析引擎 -&gt; Hive、Pig
+数据采集引擎 -&gt; Sqoop、Flume
+</code></pre><p>第三阶段：</p>
+<pre><code>HUE：Web管理工具
+ZooKeeper：实现Hadoop的HA
+Oozie：工作流引擎
+</code></pre><h4 id="Spark的学习"><a href="#Spark的学习" class="headerlink" title="Spark的学习"></a>Spark的学习</h4><pre><code>第一阶段：Scala编程语言
+第二阶段：Spark Core -&gt; 基于内存、数据的计算
+第三阶段：Spark SQL -&gt; 类似于mysql 的sql语句
+第四阶段：Spark Streaming -&gt;进行流式计算：比如：自来水厂
+</code></pre><h4 id="Apache-Storm-类似"><a href="#Apache-Storm-类似" class="headerlink" title="Apache Storm 类似"></a>Apache Storm 类似</h4><pre><code>Spark Streaming -&gt;进行流式计算
+</code></pre><h4 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h4><pre><code>Redis基于内存的数据库
+</code></pre><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><p>分布式文件系统 解决以下问题：</p>
+<pre><code>1、硬盘不够大：多几块硬盘，理论上可以无限大
+2、数据不够安全：冗余度，hdfs默认冗余为3 ，用水平复制提高效率，传输按照数据库为单位：Hadoop1.x 64M，Hadoop2.x 128M
+</code></pre><p>管理员：NameNode 硬盘：DataNode</p>
+<img src="/undefined/1.png">
+<h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><pre><code>基础编程模型：把一个大任务拆分成小任务，再进行汇总
+MR任务：Job = Map + Reduce 
+    Map的输出是Reduce的输入、MR的输入和输出都是在HDFS
+</code></pre><p> MapReduce数据流程分析：</p>
+<pre><code>Map的输出是Reduce的输入，Reduce的输入是Map的集合
+</code></pre><img src="/undefined/2.png">
+<h3 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h3><p>什么是BigTable？: 把所有的数据保存到一张表中，采用冗余 —&gt; 好处：提高效率</p>
+<pre><code>1、因为有了bigtable的思想：NoSQL：HBase数据库
+2、HBase基于Hadoop的HDFS的
+3、描述HBase的表结构
+核心思想是：利用空间换效率
+</code></pre><img src="/undefined/3.png">
+<h2 id="Hadoop环境搭建"><a href="#Hadoop环境搭建" class="headerlink" title="Hadoop环境搭建"></a>Hadoop环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>Linux环境、JDK、<a href="hadoop-3.0.0.tar.gz">http://mirrors.shu.edu.cn/apache/hadoop/common/hadoop-3.0.0/hadoop-3.0.0-src.tar.gz</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1、安装jdk、并配置环境变量</p>
+<pre><code>vim /etc/profile 末尾添加
+</code></pre><img src="/undefined/4.png">
+<p>2、解压hadoop-3.0.0.tar.gz、并配置环境变量</p>
+<pre><code>tar -zxvf hadoop-3.0.0.tar.gz -C /usr/local/
+mv hadoop-3.0.0/ hadoop
+</code></pre><img src="/undefined/5.png">
+<img src="/undefined/6.png">
+<p>vim /etc/profile 末尾添加</p>
+<img src="/undefined/7.png">
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>Hadoop有三种安装模式：</p>
+<pre><code>本地模式  ：
+    1台主机  
+    不具备HDFS，只能测试MapReduce程序
+伪分布模式：
+    1台主机  
+    具备Hadoop的所有功能，在单机上模拟一个分布式的环境
+     （1）HDFS：主：NameNode，数据节点：DataNode
+     （2）Yarn：容器，运行MapReduce程序
+                主节点：ResourceManager
+                从节点：NodeManager
+全分布模式：
+    至少3台
+</code></pre><p>我们以伪分布模式为例配置：</p>
+<h3 id="修改hdfs-site-xml：冗余度1、权限检查false"><a href="#修改hdfs-site-xml：冗余度1、权限检查false" class="headerlink" title="修改hdfs-site.xml：冗余度1、权限检查false"></a>修改hdfs-site.xml：冗余度1、权限检查false</h3><pre><code>&lt;!--配置冗余度为1--&gt;
+&lt;property&gt;
+    &lt;name&gt;dfs.replication&lt;/name&gt;
+    &lt;value&gt;1&lt;/value&gt;
+&lt;/property&gt;
 
-        
-        
+&lt;!--配置权限检查为false--&gt;
+&lt;property&gt;
+    &lt;name&gt;dfs.permissions&lt;/name&gt;
+    &lt;value&gt;false&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h3 id="修改core-site-xml"><a href="#修改core-site-xml" class="headerlink" title="修改core-site.xml"></a>修改core-site.xml</h3><pre><code>&lt;!--配置HDFS的NameNode--&gt;
+&lt;property&gt;
+    &lt;name&gt;fs.defaultFS&lt;/name&gt;
+    &lt;value&gt;hdfs://192.168.56.102:9000&lt;/value&gt;
+&lt;/property&gt;
 
-        
+&lt;!--配置DataNode保存数据的位置--&gt;
+&lt;property&gt;
+    &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+    &lt;value&gt;/usr/local/hadoop/tmp&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h3 id="修改mapred-site-xml"><a href="#修改mapred-site-xml" class="headerlink" title="修改mapred-site.xml"></a>修改mapred-site.xml</h3><pre><code>&lt;!--配置MR运行的框架--&gt;
+&lt;property&gt;
+    &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+    &lt;value&gt;yar&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;
+    &lt;value&gt;HADOOP_MAPRED_HOME=/usr/local/hadoop&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;mapreduce.map.env&lt;/name&gt;
+    &lt;value&gt;HADOOP_MAPRED_HOME=/usr/local/hadoop&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;
+    &lt;value&gt;HADOOP_MAPRED_HOME=/usr/local/hadoop&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;mapreduce.application.classpath&lt;/name&gt;
+    &lt;value&gt;
+            /usr/local/hadoop/etc/hadoop,
+            /usr/local/hadoop/share/hadoop/common/*,
+            /usr/local/hadoop/share/hadoop/common/lib/*,
+            /usr/local/hadoop/share/hadoop/hdfs/*,
+            /usr/local/hadoop/share/hadoop/hdfs/lib/*,
+            /usr/local/hadoop/share/hadoop/mapreduce/*,
+            /usr/local/hadoop/share/hadoop/mapreduce/lib/*,
+            /usr/local/hadoop/share/hadoop/yarn/*,
+            /usr/local/hadoop/share/hadoop/yarn/lib/*,
+    &lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h3 id="修改yarn-site-xml"><a href="#修改yarn-site-xml" class="headerlink" title="修改yarn-site.xml"></a>修改yarn-site.xml</h3><pre><code>&lt;!--配置ResourceManager地址--&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+    &lt;value&gt;192.168.56.102&lt;/value&gt;
+&lt;/property&gt;
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/6e2383f1.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】mysql 数据恢复实战&踩坑记录</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T22:30:43+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+&lt;!--配置NodeManager执行任务的方式--&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-service&lt;/name&gt;
+    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h3 id="格式化NameNode"><a href="#格式化NameNode" class="headerlink" title="格式化NameNode"></a>格式化NameNode</h3><p>hdfs namenode -format</p>
+<p>看到common.Storage: Storage directory /usr/local/hadoop/tmp/dfs/name has been successfully formatted表示格式化成功</p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>start-all.sh</p>
+<ul>
+<li>HDFS：存储数据</li>
+<li>YARN：</li>
+</ul>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><ul>
+<li>命令行</li>
+<li>Java Api</li>
+<li>WEB Console</li>
+</ul>
+<p>HDFS: <a href="http://192.168.56.102:50070" rel="external nofollow noopener noreferrer" target="_blank">http://192.168.56.102:50070</a></p>
+<p>Yarn: <a href="http://192.168.56.102:8088" rel="external nofollow noopener noreferrer" target="_blank">http://192.168.56.102:8088</a></p>
+<img src="/undefined/8.png">
+<p>查看HDFS管理界面和yarn资源管理系统</p>
+<img src="/undefined/9.png">
+<img src="/undefined/10.png">
+<h2 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h2><h3 id="HDFS相关命令"><a href="#HDFS相关命令" class="headerlink" title="HDFS相关命令"></a>HDFS相关命令</h3><pre><code>-mkdir   在HDFD创建目录    hdfs dfs -mkdir /data
+-ls         查看目录                 hdfs dfs -ls
+-ls -R      查看目录与子目录    hdfs dfs -ls -R
+-put        上传一个文件        hdfs dfs -put data.txt /data/input
+-copyFromLocal 上传一个文件 与-put一样
+-moveFromLocal 上传一个文件并删除本地文件 
+-copyToLocal        下载文件 hdfs dfs -copyTolocal /data/input/data.txt
+-put    下载文件 hdfs dfs -put/data/input/data.txt
+-rm     删除文件 hdfs dfs -rm
+-getmerge     将目录所有文件先合并再下载
+-cp    拷贝
+-mv    移动
+-count    统计目录下的文件个数
+-text、-cat    查看文件
+-balancer    平衡操作
+</code></pre><img src="/undefined/11.png">
+<h2 id="MapReduce示例"><a href="#MapReduce示例" class="headerlink" title="MapReduce示例"></a>MapReduce示例</h2><img src="/undefined/12.png">
+<p>结果：<br><img src="/undefined/13.png"></p>
+<p>如上 一个最简单的MapReduce示例就执行成功了</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>Hadoop是基于Java语言的，日常开发是用的PHP(写文章时，博主主要是用PHP，现在已经转Java了)，在使用、查找错误时还是蛮吃力的。工作之余还是需要多补充点其它语言的相关知识，编程语言是我们开发、学习的工具，而不应成为限制我们技术成长的瓶颈</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/b382ba8d.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】mysql中要避免使用大事务</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T17:23:40+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/c4ec5dd3.html" itemprop="url">
-              
-                <span itemprop="name">【从入门到放弃-MySQL】CLion调试MySQL8.0源码</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T02:34:42+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/76b41bca.html" rel="next" title="【从入门到放弃-PHP】foreach 引用的坑">
+                <i class="fa fa-chevron-left"></i> 【从入门到放弃-PHP】foreach 引用的坑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -503,6 +683,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -523,8 +710,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,6 +797,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础概念"><span class="nav-number">2.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大数据的本质"><span class="nav-number">2.1.</span> <span class="nav-text">大数据的本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础知识"><span class="nav-number">2.2.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习路线"><span class="nav-number">2.3.</span> <span class="nav-text">学习路线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java基础和Linux基础"><span class="nav-number">2.3.1.</span> <span class="nav-text">Java基础和Linux基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hadoop的学习：体系结构、原理、编程"><span class="nav-number">2.3.2.</span> <span class="nav-text">Hadoop的学习：体系结构、原理、编程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spark的学习"><span class="nav-number">2.3.3.</span> <span class="nav-text">Spark的学习</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Apache-Storm-类似"><span class="nav-number">2.3.4.</span> <span class="nav-text">Apache Storm 类似</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NoSQL"><span class="nav-number">2.3.5.</span> <span class="nav-text">NoSQL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS"><span class="nav-number">2.4.</span> <span class="nav-text">HDFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce"><span class="nav-number">2.5.</span> <span class="nav-text">MapReduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HBase"><span class="nav-number">2.6.</span> <span class="nav-text">HBase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadoop环境搭建"><span class="nav-number">3.</span> <span class="nav-text">Hadoop环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">3.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">3.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hdfs-site-xml：冗余度1、权限检查false"><span class="nav-number">3.4.</span> <span class="nav-text">修改hdfs-site.xml：冗余度1、权限检查false</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改core-site-xml"><span class="nav-number">3.5.</span> <span class="nav-text">修改core-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改mapred-site-xml"><span class="nav-number">3.6.</span> <span class="nav-text">修改mapred-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改yarn-site-xml"><span class="nav-number">3.7.</span> <span class="nav-text">修改yarn-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化NameNode"><span class="nav-number">3.8.</span> <span class="nav-text">格式化NameNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">3.9.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问"><span class="nav-number">3.10.</span> <span class="nav-text">访问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作："><span class="nav-number">4.</span> <span class="nav-text">基本操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS相关命令"><span class="nav-number">4.1.</span> <span class="nav-text">HDFS相关命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce示例"><span class="nav-number">5.</span> <span class="nav-text">MapReduce示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考"><span class="nav-number">6.</span> <span class="nav-text">思考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -764,6 +976,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
