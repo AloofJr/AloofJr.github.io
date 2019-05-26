@@ -35,9 +35,9 @@
       <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="PHP" scheme="https://nc2era.com/tags/PHP/"/>
-    
       <category term="C++" scheme="https://nc2era.com/tags/C/"/>
+    
+      <category term="PHP" scheme="https://nc2era.com/tags/PHP/"/>
     
   </entry>
   
@@ -110,9 +110,9 @@
       <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
-    
       <category term="MySQL" scheme="https://nc2era.com/tags/MySQL/"/>
+    
+      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
     
   </entry>
   
