@@ -97,24 +97,24 @@
 <meta property="og:site_name" content="从入门到放弃">
 <meta property="og:description" content="前言目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解 基础概念大数据的本质一、数据的存储：分布式文件系统（分布式存储） 二、数据的计算：分部署计算 基础知识学习大数据需要具备Java知识基础及Linux知识基础 学习路线Java基础和Linux基础Hadoop的学习：体系结构、原理、编程第一阶段： HDFS、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://nc2era.com/undefined/1.png">
-<meta property="og:image" content="https://nc2era.com/undefined/2.png">
-<meta property="og:image" content="https://nc2era.com/undefined/3.png">
-<meta property="og:image" content="https://nc2era.com/undefined/4.png">
-<meta property="og:image" content="https://nc2era.com/undefined/5.png">
-<meta property="og:image" content="https://nc2era.com/undefined/6.png">
-<meta property="og:image" content="https://nc2era.com/undefined/7.png">
-<meta property="og:image" content="https://nc2era.com/undefined/8.png">
-<meta property="og:image" content="https://nc2era.com/undefined/9.png">
-<meta property="og:image" content="https://nc2era.com/undefined/10.png">
-<meta property="og:image" content="https://nc2era.com/undefined/11.png">
-<meta property="og:image" content="https://nc2era.com/undefined/12.png">
-<meta property="og:image" content="https://nc2era.com/undefined/13.png">
-<meta property="og:updated_time" content="2019-05-26T06:30:17.693Z">
+<meta property="og:image" content="https://nc2era.com/76483f54/1.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/2.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/3.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/4.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/5.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/6.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/7.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/8.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/9.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/10.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/11.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/12.png">
+<meta property="og:image" content="https://nc2era.com/76483f54/13.png">
+<meta property="og:updated_time" content="2019-05-26T06:33:21.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【从入门到放弃-Hadoop】Hadoop基础学习">
 <meta name="twitter:description" content="前言目前人工智能和大数据火热，使用的场景也越来越广，日常开发中也逐渐接触了更多与大数据相关的开发需求。因此对大数据知识也有必要进行一些学习理解 基础概念大数据的本质一、数据的存储：分布式文件系统（分布式存储） 二、数据的计算：分部署计算 基础知识学习大数据需要具备Java知识基础及Linux知识基础 学习路线Java基础和Linux基础Hadoop的学习：体系结构、原理、编程第一阶段： HDFS、">
-<meta name="twitter:image" content="https://nc2era.com/undefined/1.png">
+<meta name="twitter:image" content="https://nc2era.com/76483f54/1.png">
 
 
 
@@ -477,30 +477,30 @@ Oozie：工作流引擎
 <pre><code>1、硬盘不够大：多几块硬盘，理论上可以无限大
 2、数据不够安全：冗余度，hdfs默认冗余为3 ，用水平复制提高效率，传输按照数据库为单位：Hadoop1.x 64M，Hadoop2.x 128M
 </code></pre><p>管理员：NameNode 硬盘：DataNode</p>
-<img src="/undefined/1.png">
+<img src="/76483f54/1.png">
 <h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><pre><code>基础编程模型：把一个大任务拆分成小任务，再进行汇总
 MR任务：Job = Map + Reduce 
     Map的输出是Reduce的输入、MR的输入和输出都是在HDFS
 </code></pre><p> MapReduce数据流程分析：</p>
 <pre><code>Map的输出是Reduce的输入，Reduce的输入是Map的集合
-</code></pre><img src="/undefined/2.png">
+</code></pre><img src="/76483f54/2.png">
 <h3 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h3><p>什么是BigTable？: 把所有的数据保存到一张表中，采用冗余 —&gt; 好处：提高效率</p>
 <pre><code>1、因为有了bigtable的思想：NoSQL：HBase数据库
 2、HBase基于Hadoop的HDFS的
 3、描述HBase的表结构
 核心思想是：利用空间换效率
-</code></pre><img src="/undefined/3.png">
+</code></pre><img src="/76483f54/3.png">
 <h2 id="Hadoop环境搭建"><a href="#Hadoop环境搭建" class="headerlink" title="Hadoop环境搭建"></a>Hadoop环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>Linux环境、JDK、<a href="hadoop-3.0.0.tar.gz">http://mirrors.shu.edu.cn/apache/hadoop/common/hadoop-3.0.0/hadoop-3.0.0-src.tar.gz</a></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1、安装jdk、并配置环境变量</p>
 <pre><code>vim /etc/profile 末尾添加
-</code></pre><img src="/undefined/4.png">
+</code></pre><img src="/76483f54/4.png">
 <p>2、解压hadoop-3.0.0.tar.gz、并配置环境变量</p>
 <pre><code>tar -zxvf hadoop-3.0.0.tar.gz -C /usr/local/
 mv hadoop-3.0.0/ hadoop
-</code></pre><img src="/undefined/5.png">
-<img src="/undefined/6.png">
+</code></pre><img src="/76483f54/5.png">
+<img src="/76483f54/6.png">
 <p>vim /etc/profile 末尾添加</p>
-<img src="/undefined/7.png">
+<img src="/76483f54/7.png">
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>Hadoop有三种安装模式：</p>
 <pre><code>本地模式  ：
     1台主机  
@@ -593,10 +593,10 @@ mv hadoop-3.0.0/ hadoop
 </ul>
 <p>HDFS: <a href="http://192.168.56.102:50070" rel="external nofollow noopener noreferrer" target="_blank">http://192.168.56.102:50070</a></p>
 <p>Yarn: <a href="http://192.168.56.102:8088" rel="external nofollow noopener noreferrer" target="_blank">http://192.168.56.102:8088</a></p>
-<img src="/undefined/8.png">
+<img src="/76483f54/8.png">
 <p>查看HDFS管理界面和yarn资源管理系统</p>
-<img src="/undefined/9.png">
-<img src="/undefined/10.png">
+<img src="/76483f54/9.png">
+<img src="/76483f54/10.png">
 <h2 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h2><h3 id="HDFS相关命令"><a href="#HDFS相关命令" class="headerlink" title="HDFS相关命令"></a>HDFS相关命令</h3><pre><code>-mkdir   在HDFD创建目录    hdfs dfs -mkdir /data
 -ls         查看目录                 hdfs dfs -ls
 -ls -R      查看目录与子目录    hdfs dfs -ls -R
@@ -612,9 +612,9 @@ mv hadoop-3.0.0/ hadoop
 -count    统计目录下的文件个数
 -text、-cat    查看文件
 -balancer    平衡操作
-</code></pre><img src="/undefined/11.png">
-<h2 id="MapReduce示例"><a href="#MapReduce示例" class="headerlink" title="MapReduce示例"></a>MapReduce示例</h2><img src="/undefined/12.png">
-<p>结果：<br><img src="/undefined/13.png"></p>
+</code></pre><img src="/76483f54/11.png">
+<h2 id="MapReduce示例"><a href="#MapReduce示例" class="headerlink" title="MapReduce示例"></a>MapReduce示例</h2><img src="/76483f54/12.png">
+<p>结果：<br><img src="/76483f54/13.png"></p>
 <p>如上 一个最简单的MapReduce示例就执行成功了</p>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>Hadoop是基于Java语言的，日常开发是用的PHP(写文章时，博主主要是用PHP，现在已经转Java了)，在使用、查找错误时还是蛮吃力的。工作之余还是需要多补充点其它语言的相关知识，编程语言是我们开发、学习的工具，而不应成为限制我们技术成长的瓶颈</p>
 
