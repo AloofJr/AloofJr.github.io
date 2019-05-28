@@ -89,20 +89,20 @@
 
 
 
-<meta name="description" content="前言上文分析了MySQL服务端的连接过程。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.jdbc.Driver">
+<meta name="description" content="前言上文分析了【从入门到放弃-MySQL】数据库连接过程分析。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.j">
 <meta name="keywords" content="MySQL,C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【从入门到放弃-MySQL】数据库连接过程分析-客户端">
 <meta property="og:url" content="https://nc2era.com/2dcf5558.html">
 <meta property="og:site_name" content="从入门到放弃">
-<meta property="og:description" content="前言上文分析了MySQL服务端的连接过程。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.jdbc.Driver">
+<meta property="og:description" content="前言上文分析了【从入门到放弃-MySQL】数据库连接过程分析。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.j">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://nc2era.com/2dcf5558/1.jpg">
 <meta property="og:image" content="https://nc2era.com/2dcf5558/2.jpg">
-<meta property="og:updated_time" content="2019-05-28T16:12:44.194Z">
+<meta property="og:updated_time" content="2019-05-28T16:14:23.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【从入门到放弃-MySQL】数据库连接过程分析-客户端">
-<meta name="twitter:description" content="前言上文分析了MySQL服务端的连接过程。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.jdbc.Driver">
+<meta name="twitter:description" content="前言上文分析了【从入门到放弃-MySQL】数据库连接过程分析。本文我们一起来追一下客户端和服务端建联的过程。这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。 请求流程初始化SpringBoot2.1.3默认使用的HickriCP连接池 应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.j">
 <meta name="twitter:image" content="https://nc2era.com/2dcf5558/1.jpg">
 
 
@@ -443,7 +443,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上文分析了<a href="https://nc2era.com/6c0fa14d.html">MySQL服务端的连接过程</a>。本文我们一起来追一下客户端和服务端建联的过程。<br>这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上文分析了<a href="https://nc2era.com/6c0fa14d.html">【从入门到放弃-MySQL】数据库连接过程分析</a>。本文我们一起来追一下客户端和服务端建联的过程。<br>这里客户端使用JDBC8.0，在SpringBoot2.1.3下验证。</p>
 <h2 id="请求流程"><a href="#请求流程" class="headerlink" title="请求流程"></a>请求流程</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>SpringBoot2.1.3默认使用的HickriCP连接池</p>
 <p>应用启动时，会先注册spring.datasource.driver-class-name配置的驱动，这里我们使用com.mysql.cj.jdbc.Driver</p>
 <p>启动后，我们直接通过一个查询操作的http请求来验证一次查询操作中，客户端与服务端连接的过程</p>

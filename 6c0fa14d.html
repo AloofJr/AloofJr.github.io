@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="从入门到放弃">
 <meta property="og:description" content="前言上周出现了几次连接超时、连接池满还有dbc连接事务模板失败的问题。所以有必要深入了解下MySQL的连接过程。 正好，上周研究了怎么用Clion调试MySQL源码，接下来通过调试来研究一下吧。 服务端启动sql/main.cc123extern int mysqld_main(int argc, char **argv);int main(int argc, char **argv) &amp;#123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-27T04:45:33.089Z">
+<meta property="og:updated_time" content="2019-05-28T16:14:09.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【从入门到放弃-MySQL】数据库连接过程分析">
 <meta name="twitter:description" content="前言上周出现了几次连接超时、连接池满还有dbc连接事务模板失败的问题。所以有必要深入了解下MySQL的连接过程。 正好，上周研究了怎么用Clion调试MySQL源码，接下来通过调试来研究一下吧。 服务端启动sql/main.cc123extern int mysqld_main(int argc, char **argv);int main(int argc, char **argv) &amp;#123">
@@ -494,7 +494,7 @@
 <li>如果阻塞的线程数小于最大阻塞线程数，则此线程不回收，而是进入阻塞状态（等待），等待新连接来的时候重复使用。</li>
 <li>否则关闭线程。</li>
 </ul>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>未完待续。。。</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p><a href="https://nc2era.com/2dcf5558.html">【从入门到放弃-MySQL】数据库连接过程分析-客户端</a></p>
 <p>参考文献：<br><a href="https://www.cnblogs.com/FateTHarlaown/p/8676166.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.cnblogs.com/FateTHarlaown/p/8676166.html</a></p>
 
       
