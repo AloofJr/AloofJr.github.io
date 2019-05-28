@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-05-27T04:45:33.089Z</updated>
+  <updated>2019-05-28T05:09:50.549Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【从入门到放弃-MySQL】数据库连接过程分析-客户端</title>
+    <link href="https://nc2era.com/2dcf5558.html"/>
+    <id>https://nc2era.com/2dcf5558.html</id>
+    <published>2019-05-27T05:19:29.000Z</published>
+    <updated>2019-05-28T05:09:50.549Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文分析了&lt;a href=&quot;https://nc2era.com/6c0fa14d.html&quot;&gt;MySQL服务端的连接过程&lt;/a&gt;。本文我们
+      
+    
+    </summary>
+    
+      <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="MySQL" scheme="https://nc2era.com/tags/MySQL/"/>
+    
+      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>【从入门到放弃-MySQL】数据库连接过程分析</title>
