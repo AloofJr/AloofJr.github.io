@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-07-01T16:36:43.672Z</updated>
+  <updated>2019-07-07T06:46:37.921Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【从入门到放弃-Java】并发编程-NIO-Channel</title>
-    <link href="https://nc2era.com/3c79e6b3.html"/>
-    <id>https://nc2era.com/3c79e6b3.html</id>
-    <published>2019-06-25T05:39:01.000Z</published>
-    <updated>2019-07-01T16:36:43.672Z</updated>
+    <title>【从入门到放弃-Java】并发编程-NIO-Buffer</title>
+    <link href="https://nc2era.com/d5a7a7f5.html"/>
+    <id>https://nc2era.com/d5a7a7f5.html</id>
+    <published>2019-07-07T02:43:59.000Z</published>
+    <updated>2019-07-07T06:46:37.921Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上篇&lt;a href&gt;【从入门到放弃-Java】并发编程-NIO使用&lt;/a&gt;简单介绍了nio的基础使用，本篇将深入源码分析nio中channe
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上篇&lt;a href=&quot;https://www.nc2era.com/3c79e6b3.html&quot; rel=&quot;external nofollo
       
     
     </summary>
@@ -37,11 +37,42 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
+      <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
+    
+      <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
     
       <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
       <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【从入门到放弃-Java】并发编程-NIO-Channel</title>
+    <link href="https://nc2era.com/3c79e6b3.html"/>
+    <id>https://nc2era.com/3c79e6b3.html</id>
+    <published>2019-06-25T05:39:01.000Z</published>
+    <updated>2019-07-07T02:44:50.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上篇&lt;a href=&quot;https://www.nc2era.com/e57ab61.html&quot; rel=&quot;external nofollow
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
+    
+      <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
+    
+      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
+    
+      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
     
   </entry>
   
