@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="从入门到放弃">
 <meta property="og:description" content="前言前两篇【从入门到放弃-Java】并发编程-NIO-Channel和【从入门到放弃-Java】并发编程-NIO-Buffer中我们学习了NIO中两个重要的概念Channel和Buffer。今天我们来看下另一个重要的内容 Selector 简介Selector是多路复用器，会不断轮询已经注册了的Channel。当有注册的channel产生连接、读、写等事件时，就会被Selector发现，从而可以进">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-08T15:05:47.684Z">
+<meta property="og:updated_time" content="2019-07-08T15:06:54.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【从入门到放弃-Java】并发编程-NIO-Selector">
 <meta name="twitter:description" content="前言前两篇【从入门到放弃-Java】并发编程-NIO-Channel和【从入门到放弃-Java】并发编程-NIO-Buffer中我们学习了NIO中两个重要的概念Channel和Buffer。今天我们来看下另一个重要的内容 Selector 简介Selector是多路复用器，会不断轮询已经注册了的Channel。当有注册的channel产生连接、读、写等事件时，就会被Selector发现，从而可以进">
@@ -458,8 +458,13 @@
 <h3 id="isReadable-1"><a href="#isReadable-1" class="headerlink" title="isReadable"></a>isReadable</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">isAcceptable</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (readyOps() &amp; OP_ACCEPT) != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>根据readyOps(readySet)判断channel是否是accept状态，通常是服务端使用，判断是否有客户端请求建立连接</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过使用selector，可以使用一个线程来管理多个连接。需要注意的一点是，通常读、写操作都是比较耗时的，为了提高服务端的性能应该把Selector::select和read、write的具体处理逻辑在不同的线程中处理。<br>即：使用一个线程来进行select，只做分发。在获取到就绪的SelectionKey后，通过线程池在不同的线程中处理读写操作。</p>
-<p>通过学习完NIO相关的知识，我们可以很清楚的回答下面这个问题：基于BIO实现的server端，当建立100个连接时，需要多少个线程？基于NIO实现的呢？</p>
-<p>答：基于BIO实现的server端，通常需要由一个线程accept，并为每个新建立的连接创建一个线程去处理IO操作，因此需要1个accept线程+100个IO线程。<br>基于NIO实现的server端，使用Selector多路复用机制，由一个线程进行select，为了提高并发可以使用线程池来处理IO操作，通常为了发挥CPU的性能会创建(cpu核数 <em> 2)个线程来处理IO操作。因此需要1个select线程+cpu核数</em>2个IO线程</p>
+<p>通过学习完NIO相关的知识，我们可以很清楚的回答下面这个问题</p>
+<ul>
+<li><p>问：基于BIO实现的server端，当建立100个连接时，需要多少个线程？基于NIO实现的呢？</p>
+</li>
+<li><p>答：基于BIO实现的server端，通常需要由一个线程accept，并为每个新建立的连接创建一个线程去处理IO操作，因此需要1个accept线程+100个IO线程。<br>基于NIO实现的server端，使用Selector多路复用机制，由一个线程进行select，为了提高并发可以使用线程池来处理IO操作，通常为了发挥CPU的性能会创建(cpu核数 <em> 2)个线程来处理IO操作。因此需要1个select线程+cpu核数</em>2个IO线程</p>
+</li>
+</ul>
 
       
     </div>
