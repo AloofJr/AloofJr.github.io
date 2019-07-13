@@ -18,11 +18,11 @@
       <tags>
         <tag>Java</tag>
         <tag>NIO</tag>
-        <tag>socket</tag>
-        <tag>并发编程</tag>
         <tag>buffer</tag>
         <tag>ByteBuffer</tag>
+        <tag>socket</tag>
         <tag>Channel</tag>
+        <tag>并发编程</tag>
         <tag>Selector</tag>
       </tags>
   </entry>
@@ -33,11 +33,11 @@
       <tags>
         <tag>Java</tag>
         <tag>NIO</tag>
-        <tag>socket</tag>
-        <tag>并发编程</tag>
         <tag>buffer</tag>
         <tag>ByteBuffer</tag>
+        <tag>socket</tag>
         <tag>Channel</tag>
+        <tag>并发编程</tag>
       </tags>
   </entry>
   <entry>
@@ -47,9 +47,9 @@
       <tags>
         <tag>Java</tag>
         <tag>NIO</tag>
-        <tag>channel</tag>
         <tag>socket</tag>
         <tag>并发编程</tag>
+        <tag>channel</tag>
       </tags>
   </entry>
   <entry>

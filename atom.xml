@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-07-13T17:04:16.600Z</updated>
+  <updated>2019-07-13T17:04:45.375Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nc2era.com/3567c420.html"/>
     <id>https://nc2era.com/3567c420.html</id>
     <published>2019-07-13T04:01:35.000Z</published>
-    <updated>2019-07-13T17:04:16.600Z</updated>
+    <updated>2019-07-13T17:04:45.375Z</updated>
     
     <summary type="html">
     
@@ -65,15 +65,15 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
-    
-      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
     
       <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
     
+      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
+    
       <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
+    
+      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
       <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
     
@@ -100,15 +100,15 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
-    
-      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
     
       <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
     
+      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
+    
       <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
+    
+      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -133,11 +133,11 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
-    
       <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
       <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
     
   </entry>
   
