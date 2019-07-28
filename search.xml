@@ -66,8 +66,8 @@
         <tag>buffer</tag>
         <tag>ByteBuffer</tag>
         <tag>socket</tag>
-        <tag>Channel</tag>
         <tag>Selector</tag>
+        <tag>Channel</tag>
       </tags>
   </entry>
   <entry>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>AloofJr-从入门到放弃</title>
+  <title>从入门到放弃</title>
   
   <subtitle>从入门到放弃-程序员进阶之路</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -176,9 +176,9 @@
     
       <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
-      <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
-    
       <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
+    
+      <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
     
   </entry>
   
