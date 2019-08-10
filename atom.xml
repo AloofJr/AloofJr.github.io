@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-08-10T15:20:32.833Z</updated>
+  <updated>2019-08-10T15:31:23.043Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nc2era.com/26db81a2.html"/>
     <id>https://nc2era.com/26db81a2.html</id>
     <published>2019-08-09T16:23:41.000Z</published>
-    <updated>2019-08-10T15:20:32.833Z</updated>
+    <updated>2019-08-10T15:31:23.043Z</updated>
     
     <summary type="html">
     
@@ -48,6 +48,8 @@
       <category term="锁" scheme="https://nc2era.com/tags/%E9%94%81/"/>
     
       <category term="LinkedBlockingQueue" scheme="https://nc2era.com/tags/LinkedBlockingQueue/"/>
+    
+      <category term="SynchronousQueue" scheme="https://nc2era.com/tags/SynchronousQueue/"/>
     
   </entry>
   
@@ -312,11 +314,11 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
-    
       <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
     
       <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
+    
+      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
       <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
     
@@ -347,11 +349,11 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
-    
       <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
     
       <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
+    
+      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
       <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
     
@@ -380,9 +382,9 @@
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
     
-      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
-    
       <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
+    
+      <category term="channel" scheme="https://nc2era.com/tags/channel/"/>
     
   </entry>
   
@@ -434,9 +436,9 @@
     
       <category term="Spring" scheme="https://nc2era.com/tags/Spring/"/>
     
-      <category term="SpringMvc" scheme="https://nc2era.com/tags/SpringMvc/"/>
-    
       <category term="Tomcat" scheme="https://nc2era.com/tags/Tomcat/"/>
+    
+      <category term="SpringMvc" scheme="https://nc2era.com/tags/SpringMvc/"/>
     
   </entry>
   

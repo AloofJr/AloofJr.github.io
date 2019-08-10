@@ -13,6 +13,7 @@
         <tag>synchronized</tag>
         <tag>锁</tag>
         <tag>LinkedBlockingQueue</tag>
+        <tag>SynchronousQueue</tag>
       </tags>
   </entry>
   <entry>
@@ -124,9 +125,9 @@
         <tag>Java</tag>
         <tag>并发编程</tag>
         <tag>NIO</tag>
-        <tag>socket</tag>
         <tag>buffer</tag>
         <tag>ByteBuffer</tag>
+        <tag>socket</tag>
         <tag>Selector</tag>
         <tag>Channel</tag>
       </tags>
@@ -139,9 +140,9 @@
         <tag>Java</tag>
         <tag>并发编程</tag>
         <tag>NIO</tag>
-        <tag>socket</tag>
         <tag>buffer</tag>
         <tag>ByteBuffer</tag>
+        <tag>socket</tag>
         <tag>Channel</tag>
       </tags>
   </entry>
@@ -153,8 +154,8 @@
         <tag>Java</tag>
         <tag>并发编程</tag>
         <tag>NIO</tag>
-        <tag>channel</tag>
         <tag>socket</tag>
+        <tag>channel</tag>
       </tags>
   </entry>
   <entry>
@@ -175,8 +176,8 @@
         <tag>Java</tag>
         <tag>SpringBoot</tag>
         <tag>Spring</tag>
-        <tag>SpringMvc</tag>
         <tag>Tomcat</tag>
+        <tag>SpringMvc</tag>
       </tags>
   </entry>
   <entry>
