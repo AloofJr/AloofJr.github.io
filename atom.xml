@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-08-10T15:31:23.043Z</updated>
+  <updated>2019-08-11T11:45:52.033Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【从入门到放弃-Java】并发编程-JUC-locks-ReentrantLock</title>
+    <link href="https://nc2era.com/1b8f3dad.html"/>
+    <id>https://nc2era.com/1b8f3dad.html</id>
+    <published>2019-08-11T02:33:35.000Z</published>
+    <updated>2019-08-11T11:45:52.033Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;ReentrantLock是非常常用的锁，在前面&lt;a href=&quot;https://nc2era.com/671bd3f8.html&quot;&gt;【从入
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
+    
+      <category term="线程安全" scheme="https://nc2era.com/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="锁机制" scheme="https://nc2era.com/tags/%E9%94%81%E6%9C%BA%E5%88%B6/"/>
+    
+      <category term="同步" scheme="https://nc2era.com/tags/%E5%90%8C%E6%AD%A5/"/>
+    
+      <category term="synchronized" scheme="https://nc2era.com/tags/synchronized/"/>
+    
+      <category term="锁" scheme="https://nc2era.com/tags/%E9%94%81/"/>
+    
+      <category term="ReentrantLock" scheme="https://nc2era.com/tags/ReentrantLock/"/>
+    
+  </entry>
   
   <entry>
     <title>【从入门到放弃-Java】并发编程-JUC-SynchronousQueue</title>
@@ -320,9 +355,9 @@
     
       <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
     
-      <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
-    
       <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
+    
+      <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
     
   </entry>
   
@@ -596,31 +631,6 @@
     
     
       <category term="Hadoop" scheme="https://nc2era.com/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-PHP】foreach 引用的坑</title>
-    <link href="https://nc2era.com/76b41bca.html"/>
-    <id>https://nc2era.com/76b41bca.html</id>
-    <published>2019-05-26T05:18:44.000Z</published>
-    <updated>2019-05-26T15:17:09.656Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;背景描述&quot;&gt;&lt;a href=&quot;#背景描述&quot; class=&quot;headerlink&quot; title=&quot;背景描述&quot;&gt;&lt;/a&gt;背景描述&lt;/h2&gt;&lt;p&gt;先看一段代码。&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
-      
-    
-    </summary>
-    
-      <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
-    
-      <category term="PHP" scheme="https://nc2era.com/tags/PHP/"/>
     
   </entry>
   
