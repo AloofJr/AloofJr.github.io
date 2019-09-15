@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-09-08T11:58:09.947Z</updated>
+  <updated>2019-09-15T08:31:35.365Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式队列</title>
+    <link href="https://nc2era.com/aa721058.html"/>
+    <id>https://nc2era.com/aa721058.html</id>
+    <published>2019-09-08T12:04:52.000Z</published>
+    <updated>2019-09-15T08:31:35.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文&lt;a href=&quot;https://nc2era.com/eda11ef4.html&quot;&gt;【从入门到放弃-ZooKeeper】ZooKeep
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
+    
+      <category term="ZooKeeper" scheme="https://nc2era.com/tags/ZooKeeper/"/>
+    
+  </entry>
   
   <entry>
     <title>【从入门到放弃-ZooKeeper】ZooKeeper入门</title>
@@ -601,32 +624,6 @@
       
       
         &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文分析了&lt;a href=&quot;https://nc2era.com/6c0fa14d.html&quot;&gt;【从入门到放弃-MySQL】数据库连接过程分
-      
-    
-    </summary>
-    
-      <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="MySQL" scheme="https://nc2era.com/tags/MySQL/"/>
-    
-      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-MySQL】数据库连接过程分析</title>
-    <link href="https://nc2era.com/6c0fa14d.html"/>
-    <id>https://nc2era.com/6c0fa14d.html</id>
-    <published>2019-05-26T08:48:52.000Z</published>
-    <updated>2019-05-28T16:14:09.431Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上周出现了几次连接超时、连接池满还有dbc连接事务模板失败的问题。所以有必要深入了解下MySQL的连接过程。&lt;/p&gt;
-&lt;p&gt;正好，上周研究了
       
     
     </summary>
