@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-09-15T08:31:35.365Z</updated>
+  <updated>2019-09-22T10:00:08.441Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式锁</title>
+    <link href="https://nc2era.com/1a9e764b.html"/>
+    <id>https://nc2era.com/1a9e764b.html</id>
+    <published>2019-09-15T08:41:15.000Z</published>
+    <updated>2019-09-22T10:00:08.441Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文&lt;a href=&quot;https://nc2era.com/aa721058.html&quot;&gt;【从入门到放弃-ZooKeeper】ZooKeep
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
+    
+      <category term="ZooKeeper" scheme="https://nc2era.com/tags/ZooKeeper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式队列</title>
     <link href="https://nc2era.com/aa721058.html"/>
     <id>https://nc2era.com/aa721058.html</id>
     <published>2019-09-08T12:04:52.000Z</published>
-    <updated>2019-09-15T08:31:35.365Z</updated>
+    <updated>2019-09-22T09:24:17.477Z</updated>
     
     <summary type="html">
     
@@ -609,31 +632,6 @@
       <category term="SpringBoot" scheme="https://nc2era.com/tags/SpringBoot/"/>
     
       <category term="Spring" scheme="https://nc2era.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-MySQL】数据库连接过程分析-客户端</title>
-    <link href="https://nc2era.com/2dcf5558.html"/>
-    <id>https://nc2era.com/2dcf5558.html</id>
-    <published>2019-05-27T05:19:29.000Z</published>
-    <updated>2019-05-28T16:14:23.493Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文分析了&lt;a href=&quot;https://nc2era.com/6c0fa14d.html&quot;&gt;【从入门到放弃-MySQL】数据库连接过程分
-      
-    
-    </summary>
-    
-      <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="MySQL" scheme="https://nc2era.com/tags/MySQL/"/>
-    
-      <category term="C++" scheme="https://nc2era.com/tags/C/"/>
     
   </entry>
   
