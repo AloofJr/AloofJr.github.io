@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2019-12-08T09:42:58.800Z</updated>
+  <updated>2020-01-27T14:49:57.315Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式竞选</title>
+    <link href="https://nc2era.com/f5899a14.html"/>
+    <id>https://nc2era.com/f5899a14.html</id>
+    <published>2020-01-27T11:20:05.000Z</published>
+    <updated>2020-01-27T14:49:57.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文&lt;a href=&quot;https://nc2era.com/9445b788.html&quot;&gt;【从入门到放弃-ZooKeeper】ZooKeep
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
+    
+      <category term="ZooKeeper" scheme="https://nc2era.com/tags/ZooKeeper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式锁-升级版</title>
     <link href="https://nc2era.com/9445b788.html"/>
     <id>https://nc2era.com/9445b788.html</id>
     <published>2019-09-22T10:06:01.000Z</published>
-    <updated>2019-12-08T09:42:58.800Z</updated>
+    <updated>2019-12-08T09:43:32.070Z</updated>
     
     <summary type="html">
     
@@ -599,35 +622,6 @@
       <category term="Tomcat" scheme="https://nc2era.com/tags/Tomcat/"/>
     
       <category term="SpringMvc" scheme="https://nc2era.com/tags/SpringMvc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-SpringBoot】SpringBoot源码分析-WebServer</title>
-    <link href="https://nc2era.com/9707c128.html"/>
-    <id>https://nc2era.com/9707c128.html</id>
-    <published>2019-06-02T11:26:59.000Z</published>
-    <updated>2019-06-08T05:41:17.177Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前文&lt;a href=&quot;https://nc2era.com/97473183.html&quot;&gt;【从入门到放弃-SpringBoot】Spring
-      
-    
-    </summary>
-    
-      <category term="个人学习" scheme="https://nc2era.com/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
-    
-      <category term="SpringBoot" scheme="https://nc2era.com/tags/SpringBoot/"/>
-    
-      <category term="Spring" scheme="https://nc2era.com/tags/Spring/"/>
-    
-      <category term="Tomcat" scheme="https://nc2era.com/tags/Tomcat/"/>
     
   </entry>
   
