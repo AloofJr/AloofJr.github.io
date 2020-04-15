@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2020-01-27T14:56:46.204Z</updated>
+  <updated>2020-04-15T13:43:31.281Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【从入门到放弃-Kubernetes】Kubernetes入门</title>
+    <link href="https://nc2era.com/67853354.html"/>
+    <id>https://nc2era.com/67853354.html</id>
+    <published>2020-04-15T12:02:29.000Z</published>
+    <updated>2020-04-15T13:43:31.281Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;云原生势不可挡，了解云原生肯定绕不开Kubernetes，这里不对云原生、Kubernetes概念做过多描述，直接开干，在本地搭建Kuber
+      
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://nc2era.com/tags/Kubernetes/"/>
+    
+      <category term="k8s" scheme="https://nc2era.com/tags/k8s/"/>
+    
+  </entry>
   
   <entry>
     <title>【从入门到放弃-ZooKeeper】ZooKeeper实战-分布式竞选</title>
@@ -593,35 +616,6 @@
       <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
       <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-SpringBoot】SpringBoot源码分析-请求过程</title>
-    <link href="https://nc2era.com/788cd0c2.html"/>
-    <id>https://nc2era.com/788cd0c2.html</id>
-    <published>2019-06-08T05:42:43.000Z</published>
-    <updated>2019-06-14T15:59:44.840Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前文&lt;a href=&quot;https://nc2era.com/9707c128.html&quot;&gt;【从入门到放弃-SpringBoot】Spring
-      
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
-    
-      <category term="SpringBoot" scheme="https://nc2era.com/tags/SpringBoot/"/>
-    
-      <category term="Spring" scheme="https://nc2era.com/tags/Spring/"/>
-    
-      <category term="Tomcat" scheme="https://nc2era.com/tags/Tomcat/"/>
-    
-      <category term="SpringMvc" scheme="https://nc2era.com/tags/SpringMvc/"/>
     
   </entry>
   
