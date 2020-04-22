@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nc2era.com/"/>
-  <updated>2020-04-20T17:39:41.075Z</updated>
+  <updated>2020-04-22T16:19:56.534Z</updated>
   <id>https://nc2era.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【从入门到放弃-Kubernetes】Kubernetes入门-对外暴露服务</title>
+    <link href="https://nc2era.com/7a09b302.html"/>
+    <id>https://nc2era.com/7a09b302.html</id>
+    <published>2020-04-22T07:14:48.000Z</published>
+    <updated>2020-04-22T16:19:56.534Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;上文&lt;a href=&quot;https://nc2era.com/10e50416.html&quot;&gt;【从入门到放弃-Kubernetes】Kubern
+      
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://nc2era.com/tags/Kubernetes/"/>
+    
+      <category term="k8s" scheme="https://nc2era.com/tags/k8s/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【从入门到放弃-Kubernetes】Kubernetes入门-无状态应用扩缩容</title>
     <link href="https://nc2era.com/10e50416.html"/>
     <id>https://nc2era.com/10e50416.html</id>
     <published>2020-04-20T06:09:37.000Z</published>
-    <updated>2020-04-20T17:39:41.075Z</updated>
+    <updated>2020-04-22T07:15:48.683Z</updated>
     
     <summary type="html">
     
@@ -31,14 +54,6 @@
       
     
     </summary>
-    
-      <category term="Kubernetes" scheme="https://nc2era.com/categories/Kubernetes/"/>
-    
-      <category term="k8s" scheme="https://nc2era.com/categories/Kubernetes/k8s/"/>
-    
-      <category term="Deployment" scheme="https://nc2era.com/categories/Kubernetes/k8s/Deployment/"/>
-    
-      <category term="yaml" scheme="https://nc2era.com/categories/Kubernetes/k8s/Deployment/yaml/"/>
     
     
       <category term="Kubernetes" scheme="https://nc2era.com/tags/Kubernetes/"/>
@@ -578,41 +593,6 @@
       <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
       <category term="锁机制" scheme="https://nc2era.com/tags/%E9%94%81%E6%9C%BA%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【从入门到放弃-Java】并发编程-NIO-Selector</title>
-    <link href="https://nc2era.com/2cdc5430.html"/>
-    <id>https://nc2era.com/2cdc5430.html</id>
-    <published>2019-07-07T06:51:24.000Z</published>
-    <updated>2019-07-09T04:02:25.821Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前两篇&lt;a href=&quot;https://nc2era.com/3c79e6b3.html&quot;&gt;【从入门到放弃-Java】并发编程-NIO-Ch
-      
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://nc2era.com/tags/Java/"/>
-    
-      <category term="并发编程" scheme="https://nc2era.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="NIO" scheme="https://nc2era.com/tags/NIO/"/>
-    
-      <category term="buffer" scheme="https://nc2era.com/tags/buffer/"/>
-    
-      <category term="ByteBuffer" scheme="https://nc2era.com/tags/ByteBuffer/"/>
-    
-      <category term="socket" scheme="https://nc2era.com/tags/socket/"/>
-    
-      <category term="Channel" scheme="https://nc2era.com/tags/Channel/"/>
-    
-      <category term="Selector" scheme="https://nc2era.com/tags/Selector/"/>
     
   </entry>
   
